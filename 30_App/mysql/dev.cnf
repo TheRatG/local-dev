@@ -1,0 +1,41 @@
+[mysqld]  # MySQL Server Configuration
+
+# Disable binary logging
+# Refer: https://dev.mysql.com/doc/refman/8.0/en/point-in-time-recovery.html
+skip_log_bin = 1
+
+# Size of the InnoDB buffer pool (Caches table and index data)
+# Refer: https://dev.mysql.com/doc/refman/8.0/en/innodb-buffer-pool.html
+innodb_buffer_pool_size = 6G
+
+# Size of the InnoDB log buffer (reduces disk I/O for transactions)
+# Refer: https://dev.mysql.com/doc/refman/8.0/en/innodb-redo-log.html#innodb-log-buffer
+innodb_log_buffer_size = 1G
+
+# Size of each InnoDB log file
+# Refer: https://dev.mysql.com/doc/refman/8.0/en/innodb-redo-log.html#innodb-log-setup
+innodb_log_file_size = 2G
+
+# Number of I/O threads for write operations
+# Refer: https://dev.mysql.com/doc/refman/8.0/en/innodb-io.html
+innodb_write_io_threads = 28
+
+# Controls flushing of the InnoDB logs
+# Refer: https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
+innodb_flush_log_at_trx_commit = 0
+
+# Fast shutdown option for InnoDB
+# Refer: https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_fast_shutdown
+innodb_fast_shutdown = 0
+
+# Each InnoDB table stored in its own file
+# Refer: https://dev.mysql.com/doc/refman/8.0/en/innodb-file-per-table.html
+innodb_file_per_table = 1
+
+# Disable doublewrite buffering
+# Refer: https://dev.mysql.com/doc/refman/8.0/en/innodb-doublewrite.html
+innodb_doublewrite = 0
+
+# Controls case sensitivity for table names
+# Refer: https://dev.mysql.com/doc/refman/8.0/en/identifier-case-sensitivity.html
+lower_case_table_names = 1
