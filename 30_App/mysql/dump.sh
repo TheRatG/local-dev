@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DATABASE='<database>'
-NAME=dump
+PROJECT_NAME=dump
 FILENAME="~/${PROJECT_NAME}.sql.gz"
 
 COMMON_ARGS=(
