@@ -2,7 +2,7 @@
 
 DATABASE='<database>'
 PROJECT_NAME=dump
-FILENAME="~/${PROJECT_NAME}.sql.gz"
+FILENAME="/tmp/${PROJECT_NAME}.sql.gz"
 
 COMMON_ARGS=(
   '--column-statistics=0'
