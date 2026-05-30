@@ -13,3 +13,6 @@ git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --grap
 git config --global alias.type 'cat-file -t'
 git config --global alias.dump 'cat-file -p'
 git config --global --add --bool push.autoSetupRemote true
+git config --global core.autocrlf input
+git config --global core.eol lf
+git config --global core.quotepath false
